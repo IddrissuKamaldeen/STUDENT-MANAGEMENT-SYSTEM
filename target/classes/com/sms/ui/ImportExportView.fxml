@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.sms.ui.controllers.ImportExportController"
+      spacing="24" styleClass="page">
+    <padding><Insets top="30" right="30" bottom="30" left="30"/></padding>
+
+    <Label text="Import / Export" styleClass="page-title"/>
+    <Separator/>
+
+    <!-- Import section -->
+    <VBox styleClass="section-box" spacing="12">
+        <Label text="📂 Import Students from CSV" styleClass="section-title"/>
+        <Label text="CSV must have columns: student_id, full_name, programme, level, gpa, email, phone_number, date_added, status"
+               styleClass="hint-label" wrapText="true"/>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Button text="Choose CSV File…" styleClass="btn-primary" onAction="#chooseImportFile"/>
+            <Label fx:id="lblImportFile" text="No file selected" styleClass="hint-label"/>
+        </HBox>
+        <Button text="▶ Run Import" styleClass="btn-primary" onAction="#runImport" prefWidth="160"/>
+        <VBox fx:id="importResultBox" spacing="4" visible="false" managed="false">
+            <Label fx:id="lblImportSuccess" styleClass="success-label"/>
+            <Label fx:id="lblImportErrors"  styleClass="error-label"/>
+            <Button text="💾 Save Error Report to CSV" onAction="#saveErrorReport"/>
+        </VBox>
+        <TextArea fx:id="txtImportLog" prefHeight="140" editable="false" wrapText="true"
+                  promptText="Import log will appear here…"/>
+    </VBox>
+
+    <!-- Export section -->
+    <VBox styleClass="section-box" spacing="12">
+        <Label text="📤 Export Data to CSV" styleClass="section-title"/>
+        <HBox spacing="12">
+            <Button text="Export All Students"        styleClass="btn-secondary" onAction="#exportAll"         prefWidth="200"/>
+            <Button text="Export Top Performers"      styleClass="btn-secondary" onAction="#exportTopPerformers" prefWidth="200"/>
+            <Button text="Export At-Risk Students"    styleClass="btn-secondary" onAction="#exportAtRisk"      prefWidth="200"/>
+        </HBox>
+        <Label fx:id="lblExportStatus" styleClass="hint-label"/>
+    </VBox>
+
+</VBox>

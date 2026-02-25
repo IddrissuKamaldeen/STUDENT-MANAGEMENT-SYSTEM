@@ -1,0 +1,17 @@
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\domain\Student.java
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\domain\ValidationResult.java
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\MainApp.java
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\repository\SQLiteStudentRepository.java
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\repository\StudentRepository.java
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\service\CsvService.java
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\service\StudentService.java
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\service\ValidationService.java
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\ui\controllers\DashboardController.java
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\ui\controllers\ImportExportController.java
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\ui\controllers\MainController.java
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\ui\controllers\ReportsController.java
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\ui\controllers\SettingsController.java
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\ui\controllers\StudentsController.java
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\util\AppLogger.java
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\util\DatabaseManager.java
+C:\Users\tln\Downloads\StudentManagementSystemPlus\STUDENT-MANAGEMENT-SYSTEM\src\main\java\com\sms\util\ServiceLocator.java

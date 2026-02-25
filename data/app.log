@@ -1,0 +1,8 @@
+[2026-02-25 22:20:52] [INFO ] Application started.
+[2026-02-25 22:20:54] [INFO ] Database connection opened: data\students.db
+[2026-02-25 22:20:54] [INFO ] Database schema verified/created.
+[2026-02-25 23:16:35] [INFO ] Application started.
+[2026-02-25 23:16:38] [INFO ] Database connection opened: data\students.db
+[2026-02-25 23:16:38] [INFO ] Database schema verified/created.
+[2026-02-25 23:16:54] [INFO ] Application closed.
+[2026-02-25 23:16:54] [INFO ] Database connection closed.

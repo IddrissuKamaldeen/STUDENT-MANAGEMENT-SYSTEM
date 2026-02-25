@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch MainApp",
+            "request": "launch",
+            "mainClass": "com.sms.MainApp",
+            "vmArgs": "--module-path \"C:/javafx/lib\" --add-modules javafx.controls,javafx.fxml"
+        }
+    ],
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.configuration.updateBuildConfiguration": "automatic"
+}

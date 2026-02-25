@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch MainApp (JavaFX 25)",
+            "request": "launch",
+            "mainClass": "com.sms.MainApp",
+            "projectName": "StudentManagementSystemPlus",  // optional but recommended
+            "vmArgs": [
+                "--module-path",
+                "C:/Program Files/javafx/javafx-sdk-25.0.2/lib",
+                "--add-modules",
+                "javafx.controls,javafx.fxml,javafx.graphics,javafx.base"
+            ]
+        }
+    ]
+}

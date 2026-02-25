@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.sms.ui.controllers.DashboardController"
+      spacing="24" styleClass="page">
+    <padding><Insets top="30" right="30" bottom="30" left="30"/></padding>
+
+    <Label text="Dashboard" styleClass="page-title"/>
+    <Separator/>
+
+    <!-- Stat cards row -->
+    <HBox spacing="16">
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+            <Label text="Total Students" styleClass="stat-label"/>
+            <Label fx:id="lblTotal" text="0" styleClass="stat-value"/>
+        </VBox>
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+            <Label text="Active" styleClass="stat-label"/>
+            <Label fx:id="lblActive" text="0" styleClass="stat-value-green"/>
+        </VBox>
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+            <Label text="Inactive" styleClass="stat-label"/>
+            <Label fx:id="lblInactive" text="0" styleClass="stat-value-red"/>
+        </VBox>
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+            <Label text="Average GPA" styleClass="stat-label"/>
+            <Label fx:id="lblAvgGpa" text="0.00" styleClass="stat-value-blue"/>
+        </VBox>
+    </HBox>
+
+    <!-- Quick actions -->
+    <Label text="Quick Actions" styleClass="section-title"/>
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <Button text="👥  Manage Students" styleClass="action-btn" onAction="#goStudents"/>
+        <Button text="📊  View Reports"     styleClass="action-btn" onAction="#goReports"/>
+        <Button text="📂  Import / Export"  styleClass="action-btn" onAction="#goImportExport"/>
+        <Button text="⚙️  Settings"         styleClass="action-btn" onAction="#goSettings"/>
+    </HBox>
+
+</VBox>

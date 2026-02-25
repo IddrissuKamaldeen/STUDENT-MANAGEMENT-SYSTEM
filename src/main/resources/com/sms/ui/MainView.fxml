@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.sms.ui.controllers.MainController"
+            stylesheets="@styles.css">
+
+    <!-- ── Left sidebar navigation ── -->
+    <left>
+        <VBox styleClass="sidebar" spacing="4" prefWidth="180">
+            <padding><Insets top="20" right="10" bottom="20" left="10"/></padding>
+
+            <Label text="📚 SMS Plus" styleClass="sidebar-title"/>
+            <Separator/>
+
+            <Button fx:id="btnDashboard" text="🏠  Dashboard"
+                    styleClass="nav-btn" maxWidth="Infinity"
+                    onAction="#showDashboard"/>
+            <Button fx:id="btnStudents" text="👥  Students"
+                    styleClass="nav-btn" maxWidth="Infinity"
+                    onAction="#showStudents"/>
+            <Button fx:id="btnReports" text="📊  Reports"
+                    styleClass="nav-btn" maxWidth="Infinity"
+                    onAction="#showReports"/>
+            <Button fx:id="btnImportExport" text="📂  Import / Export"
+                    styleClass="nav-btn" maxWidth="Infinity"
+                    onAction="#showImportExport"/>
+            <Button fx:id="btnSettings" text="⚙️  Settings"
+                    styleClass="nav-btn" maxWidth="Infinity"
+                    onAction="#showSettings"/>
+
+            <VBox VBox.vgrow="ALWAYS"/>
+            <Label fx:id="lblVersion" text="v1.0.0" styleClass="version-label"/>
+        </VBox>
+    </left>
+
+    <!-- ── Center content area – swapped by controller ── -->
+    <center>
+        <StackPane fx:id="contentArea" styleClass="content-area"/>
+    </center>
+
+</BorderPane>

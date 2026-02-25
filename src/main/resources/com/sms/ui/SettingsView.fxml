@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.sms.ui.controllers.SettingsController"
+      spacing="24" styleClass="page">
+    <padding><Insets top="30" right="30" bottom="30" left="30"/></padding>
+
+    <Label text="Settings" styleClass="page-title"/>
+    <Separator/>
+
+    <VBox styleClass="section-box" spacing="12" maxWidth="400">
+        <Label text="⚠️ At-Risk GPA Threshold" styleClass="section-title"/>
+        <Label text="Students with a GPA below this value will appear in the At-Risk report."
+               wrapText="true" styleClass="hint-label"/>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <TextField fx:id="txtThreshold" prefWidth="100" text="2.0"/>
+            <Button text="Save" styleClass="btn-primary" onAction="#saveThreshold"/>
+        </HBox>
+        <Label fx:id="lblSettingsMsg" styleClass="success-label"/>
+    </VBox>
+
+</VBox>

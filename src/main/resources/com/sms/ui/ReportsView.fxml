@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.sms.ui.controllers.ReportsController"
+      spacing="12" styleClass="page">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Reports &amp; Analytics" styleClass="page-title"/>
+    <Separator/>
+
+    <TabPane VBox.vgrow="ALWAYS">
+
+        <!-- Tab 1: Top Performers -->
+        <Tab text="🏆 Top Performers" closable="false">
+            <VBox spacing="10">
+                <padding><Insets top="12" right="12" bottom="12" left="12"/></padding>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Programme:"/>
+                    <ComboBox fx:id="topProgramme" promptText="All" prefWidth="160" onAction="#refreshTopPerformers"/>
+                    <Label text="Level:"/>
+                    <ComboBox fx:id="topLevel" promptText="All" prefWidth="100" onAction="#refreshTopPerformers"/>
+                    <Button text="🔄 Refresh" onAction="#refreshTopPerformers"/>
+                    <Button text="📥 Export CSV" styleClass="btn-primary" onAction="#exportTopPerformers"/>
+                </HBox>
+                <TableView fx:id="tblTop" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="topColId"   text="ID"        prefWidth="100"/>
+                        <TableColumn fx:id="topColName" text="Name"      prefWidth="180"/>
+                        <TableColumn fx:id="topColProg" text="Programme" prefWidth="160"/>
+                        <TableColumn fx:id="topColLvl"  text="Level"     prefWidth="70"/>
+                        <TableColumn fx:id="topColGpa"  text="GPA"       prefWidth="70"/>
+                    </columns>
+                    <placeholder><Label text="No data."/></placeholder>
+                </TableView>
+            </VBox>
+        </Tab>
+
+        <!-- Tab 2: At-Risk -->
+        <Tab text="⚠️ At-Risk Students" closable="false">
+            <VBox spacing="10">
+                <padding><Insets top="12" right="12" bottom="12" left="12"/></padding>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="GPA Threshold:"/>
+                    <TextField fx:id="txtThreshold" text="2.0" prefWidth="80"/>
+                    <Button text="🔄 Refresh" onAction="#refreshAtRisk"/>
+                    <Button text="📥 Export CSV" styleClass="btn-primary" onAction="#exportAtRisk"/>
+                </HBox>
+                <TableView fx:id="tblRisk" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="riskColId"   text="ID"        prefWidth="100"/>
+                        <TableColumn fx:id="riskColName" text="Name"      prefWidth="180"/>
+                        <TableColumn fx:id="riskColProg" text="Programme" prefWidth="160"/>
+                        <TableColumn fx:id="riskColGpa"  text="GPA"       prefWidth="70"/>
+                        <TableColumn fx:id="riskColStat" text="Status"    prefWidth="80"/>
+                    </columns>
+                    <placeholder><Label text="No at-risk students."/></placeholder>
+                </TableView>
+            </VBox>
+        </Tab>
+
+        <!-- Tab 3: GPA Distribution -->
+        <Tab text="📊 GPA Distribution" closable="false">
+            <VBox spacing="10">
+                <padding><Insets top="12" right="12" bottom="12" left="12"/></padding>
+                <Button text="🔄 Refresh" onAction="#refreshDistribution"/>
+                <TableView fx:id="tblDist" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="distColBand"  text="GPA Band" prefWidth="200"/>
+                        <TableColumn fx:id="distColCount" text="Count"     prefWidth="100"/>
+                    </columns>
+                    <placeholder><Label text="No data."/></placeholder>
+                </TableView>
+            </VBox>
+        </Tab>
+
+        <!-- Tab 4: Programme Summary -->
+        <Tab text="🎓 Programme Summary" closable="false">
+            <VBox spacing="10">
+                <padding><Insets top="12" right="12" bottom="12" left="12"/></padding>
+                <Button text="🔄 Refresh" onAction="#refreshProgrammeSummary"/>
+                <TableView fx:id="tblProg" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="progColName"  text="Programme"   prefWidth="220"/>
+                        <TableColumn fx:id="progColTotal" text="Total"        prefWidth="80"/>
+                        <TableColumn fx:id="progColAvg"   text="Average GPA" prefWidth="120"/>
+                    </columns>
+                    <placeholder><Label text="No data."/></placeholder>
+                </TableView>
+            </VBox>
+        </Tab>
+
+    </TabPane>
+</VBox>

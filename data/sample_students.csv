@@ -1,0 +1,11 @@
+student_id,full_name,programme,level,gpa,email,phone_number,date_added,status
+STU0001,Kwame Asante,Computer Science,300,3.8,kwame@stu.edu.gh,0244123456,2025-09-01,Active
+STU0002,Abena Mensah,Computer Science,200,1.4,abena@stu.edu.gh,0554987654,2025-09-01,Active
+STU0003,Kofi Boateng,Mathematics,400,2.9,kofi@stu.edu.gh,0201234567,2025-09-01,Active
+STU0004,Ama Owusu,Electrical Engineering,100,3.5,ama@stu.edu.gh,0271122334,2025-09-01,Active
+STU0005,Yaw Darko,Computer Science,300,1.8,yaw@stu.edu.gh,0244556677,2025-09-01,Inactive
+STU0006,Akosua Frimpong,Information Technology,200,3.2,akosua@stu.edu.gh,0208877665,2025-09-01,Active
+STU0007,Nana Aidoo,Mathematics,500,0.7,nana@stu.edu.gh,0244998877,2025-09-01,Active
+STU0008,Efua Baah,Computer Science,100,3.9,efua@stu.edu.gh,0551234567,2025-09-01,Active
+STU0009,Kojo Sarpong,Electrical Engineering,200,2.1,kojo@stu.edu.gh,0261122334,2025-09-01,Active
+STU0010,Adwoa Acheampong,Information Technology,300,1.1,adwoa@stu.edu.gh,0244556688,2025-09-01,Active

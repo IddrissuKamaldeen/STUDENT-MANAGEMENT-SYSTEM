@@ -1,0 +1,15 @@
+## VM Options for Running Student Management System Plus on Windows
+
+Paste these VM options into IntelliJ IDEA under:
+Run → Edit Configurations → VM Options
+
+--module-path "C:\javafx\javafx-sdk-21\lib" --add-modules javafx.controls,javafx.fxml
+
+NOTES:
+- Replace "C:\javafx\javafx-sdk-21\lib" with the actual path where you extracted the JavaFX SDK.
+- JDK version used: Java 21 (OpenJDK 21 or Oracle JDK 21)
+- JavaFX version: 21.0.2
+- Platform: Windows 10 / Windows 11 (offline)
+
+If running from command line:
+java --module-path "C:\javafx\javafx-sdk-21\lib" --add-modules javafx.controls,javafx.fxml -cp target\StudentManagementSystemPlus-1.0.0.jar com.sms.MainApp

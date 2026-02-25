@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.sms.ui.controllers.StudentsController"
+      spacing="12" styleClass="page">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Students" styleClass="page-title"/>
+    <Separator/>
+
+    <!-- Search and filter bar -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <TextField fx:id="txtSearch" promptText="Search by ID or Name…"
+                   prefWidth="220" onKeyReleased="#onSearch"/>
+        <ComboBox fx:id="cbProgramme" promptText="Programme" prefWidth="160" onAction="#onFilter"/>
+        <ComboBox fx:id="cbLevel"     promptText="Level"     prefWidth="100" onAction="#onFilter"/>
+        <ComboBox fx:id="cbStatus"    promptText="Status"    prefWidth="110" onAction="#onFilter"/>
+        <Button text="Clear" onAction="#clearFilters"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="➕ Add"     styleClass="btn-primary"  onAction="#showAddForm"/>
+        <Button text="✏️ Edit"    styleClass="btn-secondary" onAction="#showEditForm"/>
+        <Button text="🗑️ Delete"  styleClass="btn-danger"    onAction="#deleteStudent"/>
+        <Button text="🔄 Refresh" onAction="#refreshTable"/>
+    </HBox>
+
+    <!-- Table + form split -->
+    <HBox spacing="12" VBox.vgrow="ALWAYS">
+
+        <!-- Student table -->
+        <TableView fx:id="tblStudents" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colId"      text="ID"        prefWidth="100"/>
+                <TableColumn fx:id="colName"    text="Full Name" prefWidth="160"/>
+                <TableColumn fx:id="colProg"    text="Programme" prefWidth="150"/>
+                <TableColumn fx:id="colLevel"   text="Level"     prefWidth="60"/>
+                <TableColumn fx:id="colGpa"     text="GPA"       prefWidth="60"/>
+                <TableColumn fx:id="colEmail"   text="Email"     prefWidth="170"/>
+                <TableColumn fx:id="colPhone"   text="Phone"     prefWidth="110"/>
+                <TableColumn fx:id="colDate"    text="Added"     prefWidth="100"/>
+                <TableColumn fx:id="colStatus"  text="Status"    prefWidth="80"/>
+            </columns>
+            <placeholder><Label text="No students found."/></placeholder>
+        </TableView>
+
+        <!-- Add / Edit form -->
+        <VBox fx:id="formPanel" styleClass="form-panel" spacing="8"
+              prefWidth="280" visible="false" managed="false">
+            <Label fx:id="lblFormTitle" text="Add Student" styleClass="section-title"/>
+            <Separator/>
+
+            <Label text="Student ID *"/>
+            <TextField fx:id="fldId" promptText="e.g. STU0001"/>
+
+            <Label text="Full Name *"/>
+            <TextField fx:id="fldName" promptText="e.g. John Mensah"/>
+
+            <Label text="Programme *"/>
+            <TextField fx:id="fldProgramme" promptText="e.g. Computer Science"/>
+
+            <Label text="Level *"/>
+            <ComboBox fx:id="fldLevel" prefWidth="Infinity"/>
+
+            <Label text="GPA *"/>
+            <TextField fx:id="fldGpa" promptText="0.0 – 4.0"/>
+
+            <Label text="Email *"/>
+            <TextField fx:id="fldEmail" promptText="name@example.com"/>
+
+            <Label text="Phone *"/>
+            <TextField fx:id="fldPhone" promptText="0200000000"/>
+
+            <Label text="Status *"/>
+            <ComboBox fx:id="fldStatus" prefWidth="Infinity"/>
+
+            <HBox spacing="8">
+                <Button text="💾 Save"   styleClass="btn-primary"   onAction="#saveStudent" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                <Button text="✖ Cancel" styleClass="btn-secondary" onAction="#hideForm"    HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+            </HBox>
+
+            <Label fx:id="lblFormError" styleClass="error-label" wrapText="true"/>
+        </VBox>
+    </HBox>
+
+    <Label fx:id="lblStatus" text="Ready" styleClass="status-bar"/>
+</VBox>
